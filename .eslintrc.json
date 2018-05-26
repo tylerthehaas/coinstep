@@ -13,6 +13,8 @@
     "window": false
   },
   "rules": {
-    "react/forbid-prop-types": 2
+    "react/forbid-prop-types": 2,
+    "no-use-before-define": "off",
+    "no-console": "warn"
   }
 }
