@@ -2,6 +2,22 @@
   "name": "coinstep",
   "version": "0.1.0",
   "private": true,
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/components/test-setup.js",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/path/to/dir/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 85,
+        "functions": 95,
+        "lines": 85,
+        "statements": 85
+      }
+    }
+  },
   "dependencies": {
     "flow-bin": "^0.73.0",
     "react": "^16.4.0",
@@ -12,11 +28,12 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
+    "build": "react-scripts build",
+    "cover": "npm test -- --coverage",
+    "eject": "react-scripts eject",
     "flow": "flow",
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --env=jsdom"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
