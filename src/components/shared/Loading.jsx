@@ -1,6 +1,6 @@
 import React from "react";
 
-type Props = { isLoading: Boolean, error: ?Error };
+type Props = { isLoading: boolean, error: ?Error };
 
 const Loading = ({ isLoading, error }: Props) => {
   // Handle the loading state
