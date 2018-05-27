@@ -1,7 +1,5 @@
 import React from "react";
 
-import type { Error } from "react-loadable";
-
 type Props = { isLoading: Boolean, error: ?Error };
 
 const Loading = ({ isLoading, error }: Props) => {
