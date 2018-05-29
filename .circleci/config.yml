@@ -1,28 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: /usr/src/app
-    docker:
-      - image: circle/node:8
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
-      - run: npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: npm test
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
-version: 2
-jobs:
-  build:
+    machine: true
     docker:
       - image: circleci/node:8.9
     working_directory: /usr/src/app
