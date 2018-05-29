@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     machine: true
-    working_directory: /usr/src/app
+    working_directory: ~/repo
     steps:
       - checkout
       - restore_cache:
