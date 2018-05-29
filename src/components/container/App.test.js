@@ -1,11 +1,14 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from "react";
-import ReactDOM from "react-dom";
+import { shallow } from "enzyme";
 
+import "../test-setup";
 import App from "./App";
 
-it("renders without crashing", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe("App", () => {
+  it("renders without crashing", () => {
+    const wrapper = shallow(<App />);
+    const app = wrapper.find(".App");
+    expect(app).toHaveLength(1);
+  });
 });
