@@ -18,3 +18,4 @@ jobs:
       - run: npx flow-typed update
       - run: npx flow-typed install jest@22
       - run: npx flow
+      - run: npx eslint .
