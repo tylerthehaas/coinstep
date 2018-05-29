@@ -2,8 +2,6 @@ version: 2
 jobs:
   build:
     machine: true
-    docker:
-      - image: circleci/node:8.9
     working_directory: /usr/src/app
     steps:
       - checkout
