@@ -5,7 +5,6 @@ import { MemoryRouter } from "react-router-dom";
 
 import Routes from "./routes";
 import "./components/test-setup";
-import App from "./components/container/App";
 
 describe("routes", () => {
   it("Should render App component @ /", done => {
