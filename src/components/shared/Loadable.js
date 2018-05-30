@@ -1,6 +1,6 @@
 import ReactLoadable from "react-loadable";
 
-import Loading from "./Loading";
+import Loading from "../presentational/Loading";
 
 const Loadable = (importLocation: string) =>
   ReactLoadable({
