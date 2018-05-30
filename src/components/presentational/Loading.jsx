@@ -1,6 +1,6 @@
 import React from "react";
 
-type Props = { isLoading: ?boolean, error: ?Error };
+type Props = { isLoading?: boolean, error?: ?Error };
 
 const Loading = ({ isLoading, error }: Props) => {
   // Handle the loading state
@@ -13,6 +13,11 @@ const Loading = ({ isLoading, error }: Props) => {
     return <div>Sorry, there was a problem loading the page.</div>;
   }
   return null;
+};
+
+Loading.defaultProps = {
+  isLoading: false,
+  error: null,
 };
 
 export default Loading;
