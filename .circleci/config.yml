@@ -15,6 +15,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm test
+      - run: npm run cover
       - run: npx flow-typed update
       - run: npx flow-typed install jest@22
       - run: npx flow
